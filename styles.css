@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding:0;
+}
+header{
+    position: relative;
+}
+.brand{
+    position: absolute;
+    margin:auto;
+    padding:auto;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500; /* Higher value */
+}
+.hr1{
+    color:black;
+    background-color: white;
+    height: auto;
+    margin:3px;
+}
+.background-image{
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Parallax effect - image stays fixed */
+    height: 86dvh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: white; /* Text color */
+    text-align: center;
+    position: relative;
+    filter: brightness(-60px);
+    margin: auto;
+    padding: 80px;
+}
+.content{
+    display: flex;
+    justify-content:space-around;
+    padding:19dvh;
+    margin:auto;
+    color: white;
+}
+.caption{
+    justify-content: space-around;
+    padding:auto;
+    margin:auto;
+}
+.meals {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between cards */
+    padding: 50px 50px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.meal {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent cards */
+    border-radius: 30px;
+    overflow: hidden;
+    height: auto;
+    padding:10px;
+    width: 350px;
+    font-size: 70px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.meal:hover {
+    transform: scale(1.15);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.726);
+    border: 5px solid rgba(0, 0, 0, 0.506);
+    
+}
+
+.meal img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.meal h3{
+    font-family: 'Irish Grover', cursive;
+    color: #ffffff;
+    padding: auto;
+    margin:auto;
+    font-size: 1.5rem;
+}
+h1,h2,h3{
+    font-family: Roboto Mono;
+    font-size: 50px; text-shadow: -1px -1px 0 black,  1px -1px 0 black, -1px 1px 0 black,1px 1px 0 black; border-color: black;
+}
+
+.links{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buttons button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    border: 2px solid white;
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px #b7b7b7, 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttons button:hover {
+    color: black;
+    background-color: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
+    transform: scale(1.05); /* Slightly enlarge */
+    border-color: white;
+}
+
+/* Active (Click) Effect */
+.buttons button:active {
+    transform: scale(0.95); /* Button shrinks when clicked */
+    box-shadow: 0 0 5px #00e5ff;
+}
+
+/* Responsive Centering for Links Container */
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.linked-pages{
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color from the parent */
+}
+.feedback-page{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding:auto;
+    margin:auto;
+}
+.feedback-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.email input,.text input{
+    margin:2px;
+    padding:2px;
+    width:100dvh;
+    height: 30px;
+    border-color: white;
+    border-radius: 90px;
+    border: 3px solid white ;
+    text-align: center;
+    background-color: #ffffff00;
+    margin:5px;
+    color:white;
+    font-family: Roboto Mono;
+    font-size: 15px;
+}
+.button button{
+    margin:2px;
+    padding:2px;
+    width:250px;
+    border-color: white;
+    border-radius: 90px;
+    border: 3px solid white ;
+    text-align: center;
+    background-color: #ffffff00;
+    margin:5px;
+    color:white;
+    font-family: Roboto Mono;
+    font-size: 15px;
+}
+.email input::placeholder,
+.text input::placeholder{
+    color:white;
+
+}
+.email-button,.text-button,.button-button{
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
+    width:auto;
+}
+.button:hover{
+    transform: scale(1.15);
+}
+.email:hover,.text:hover{
+    transform: scale3d(1.0);transform: scale(1.15);
+}
